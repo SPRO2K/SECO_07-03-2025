@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Aplicación web progresiva para la conversión de unidades de temperatura" />
+        <meta name="keywords" content="cálculo, matemático, conversión, temperatura, práctica, investigación, estudio" />
+        <meta name="author" content="Sebastian Ernesto Cordova Orellana" />
+        <meta name="copyright" content="2025 REMQ" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Conversor de temperatura - Sebastian Ernesto Cordova</title>
+        <link rel="shortcut icon" href="https://c.s-microsoft.com/favicon.ico?v2" />
+        <link rel="stylesheet" href="css/style.css" />
+        <!-- <link rel="stylesheet" href="fonts/fontawesome-free-6.6.0-web/css/all.css" /> -->
+        <link rel="manifest" href="manifest.json" />
+    </head>
+    <body>
+        <h1>Convertir de temperatura</h1>
+        <form id="converter">
+            <label for="input-temp">Temperatura:</label>
+            <input type="text" id="input-temp" name="input-temp" value="20" />
+
+            <label for="input-unit">De</label>
+            <select id="input-unit" name="input-unit">
+                <option value="c">Celsius</option>
+                <option value="f">Fahrenheit</option>
+                <option value="k">Kelvin</option>
+            </select>
+
+            <label for="output-unit">Hacia</label>
+            <select id="output-unit" name="output-unit">
+                <option value="c">Celsius</option>
+                <option value="f">Fahrenheit</option>
+                <option value="k">Kelvin</option>
+            </select>
+
+            <output name="output-temp" id="output-temp" for="input-temp input-unit output-unit">68 F</output>
+        </form>
+
+        <script src="js/converter.js"></script>
+        <script>
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('sw.js', { scope: './' });
+            }
+        </script>
+    </body>
+</html>
